@@ -5,15 +5,17 @@ const mapStateToProps = reduxState => ({
     reduxState,
 });
 
-class HomePageItem extends Component {
+class HomeViewItem extends Component {
   // Renders the entire app on the DOM
   render() {
     return (
       <div>
-        <h1>Home Page</h1>
+        {/* <h1>HomeViewItem</h1> */}
+        <span><img src={this.props.poster}/></span>
+        {/* <pre>{JSON.stringify(this.props.poster)}</pre> */}
       </div>
     );
   }
 }
 
-export default connect(mapStateToProps)(HomePageItem);
+export default connect(mapStateToProps)(HomeViewItem);

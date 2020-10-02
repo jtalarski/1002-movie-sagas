@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import HomeViewItem from '../HomeViewItem/HomeViewItem';
 //import HomeViewItem from '../HomeViewItem/HomeViewItem';
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -24,7 +25,9 @@ componentDidMount () {
     return (
       <div>
         <h1>Home View</h1>
-        <pre>SB movies{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre>
+        {/* <pre>SB movies{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre> */}
+        {this.props.reduxState.movies.map((movie, i) => 
+            <HomeViewItem key={movie.id} title={movie.title} poster={movie.poster} />)}
       </div>
     );
   }

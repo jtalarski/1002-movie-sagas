@@ -19,7 +19,7 @@ function* fetchMoviesSaga(action) {
   
     let response = yield axios({
       method: "GET",
-      url: '/api/movies'
+      url: '/api/movie'
     });
   
     console.log('Got some movies', response.data);

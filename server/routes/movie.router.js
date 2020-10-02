@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 
 // attempt to get information from the DB
 router.get('/', (req, res) => {
-  console.log('in get', req.body);
+  console.log('/GET');
   const queryText = 'SELECT * FROM movies;';
   pool.query(queryText)
     .then((result) => { res.send(result.rows); })
