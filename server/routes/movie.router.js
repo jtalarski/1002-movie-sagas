@@ -39,4 +39,18 @@ router.post('/', (req, res) => {
   })
 })
 
+// attempt to get information from the DB
+router.get('/', (req, res) => {
+  const queryText = 'SELECT * FROM movies;';
+  pool.query(queryText)
+    .then((result) => { res.send(result.rows); })
+    .catch((err) => {
+      console.error('ERROR IN GET /movies');
+      res.sendStatus(500);
+    })
+});
+
+
+
+
 module.exports = router;
