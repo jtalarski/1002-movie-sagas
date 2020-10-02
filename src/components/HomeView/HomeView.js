@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import HomeViewItem from '../HomeViewItem/HomeViewItem';
+//import HomeViewItem from '../HomeViewItem/HomeViewItem';
 const mapStateToProps = reduxState => ({
     reduxState,
 });
@@ -24,7 +24,7 @@ componentDidMount () {
     return (
       <div>
         <h1>Home View</h1>
-        <pre>{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre>
+        <pre>SB movies{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre>
       </div>
     );
   }
