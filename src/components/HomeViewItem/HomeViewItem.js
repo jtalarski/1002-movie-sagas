@@ -24,12 +24,10 @@ idForDetail = ()=>{
   render() {
     return (
       <div>
-        {/* <h1>HomeViewItem</h1> */}
-        {/* <span><img src={this.props.poster} /></span> */}
+        
         <h4>{this.props.title}</h4>
         <input type="image" id={this.props.id} src={this.props.poster} onClick={this.idForDetail} alt="movie poster"></input><br></br>
-        {/* <p>{this.props.description}</p> */}
-        {/* <pre>{JSON.stringify(this.props.poster)}</pre> */}
+        
       </div>
     );
   }

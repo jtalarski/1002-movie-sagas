@@ -13,7 +13,8 @@ import axios from 'axios';
 import { put, takeEvery } from 'redux-saga/effects';
 
 
-// my attempt at pulling in the movies ####
+// used to make GET request to movies.router in order to
+// display all movies currently in the DB
 function* fetchMoviesSaga(action) {
     console.log('hit fetchMoviesSaga with', action);
   
@@ -29,6 +30,8 @@ function* fetchMoviesSaga(action) {
     });
   }
 
+// used to make GET request to movies.router for values of one 
+// movie id
   function* fetchDetailsSaga(action) {
     console.log('hit fetchDetailsSaga with', action);
   
@@ -44,6 +47,9 @@ function* fetchMoviesSaga(action) {
     });
   }
 
+
+ // used to senf POST request to movie.router and
+ // to reset the DOM with the fetchMoviesSaga
 function* addMovieSaga (action){
     console.log('hit addMovieSaga', action.payload)
     yield axios({
@@ -88,7 +94,7 @@ const genres = (state = [], action) => {
             return state;
     }
 }
-
+// used to store attributes about more selected for detail
 const details = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAIL':
@@ -97,6 +103,8 @@ const details = (state = [], action) => {
             return state;
     }
 }
+
+//used to store information for new movie
 const newMovie = (state = [], action) => {
     switch (action.type) {
         case 'SET_NEWMOVIE':
