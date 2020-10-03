@@ -14,7 +14,7 @@ class App extends Component {
         <Router>
           <nav>
               <Link to="/">Home</Link><br></br>
-              <Link to="/AddMovie">AddMovie</Link><br></br>
+              <Link to="/AddMovie">Add Movie</Link><br></br>
               </nav>
             
           <Route path="/" exact><HomeView/></Route>
