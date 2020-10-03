@@ -29,7 +29,7 @@ the home page.
 ### To Add a New Movie
 Click the 'Add Movie' link at the top of the home page. You will be linked
 to the Add Movie form. Input the requested information ##for testing, use 
-images/coming.gif for the post url. Once you have input the information 
+images/coming.gif## for the post url. Once you have input the information 
 click 'save' to add the movie to the database. You will be automatically
 linked back to the home page.
 
