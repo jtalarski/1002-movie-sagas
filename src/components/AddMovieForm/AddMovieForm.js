@@ -57,6 +57,7 @@ toHome = () => {
         <input placeholder="Movie Poster URL" 
           onChange={(event) => this.handleChangeFor('poster', event)}> 
           </input><br/>
+          <span>For testing use /images/coming.gif</span><br></br>
         <textarea placeholder="Movie Description" 
           onChange={(event) => this.handleChangeFor('description', event)}>
           </textarea><br/>

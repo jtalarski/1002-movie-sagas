@@ -22,10 +22,13 @@ toHome = () => {
     {/* displays detail information for movies that was selcted on HomeView page
     also includes a "back to list" button that returns user to HomeView */}
         <h3>{this.props.title}</h3>
-        <img src={this.props.poster} alt="movie poster"></img>
-        <p>{this.props.description}</p>
+        
+        <img src={this.props.poster} alt="movie poster"></img><br></br>
+        <button onClick={this.toHome}>Back To List</button><br></br>
         <p>Genre: {this.props.genre}</p>
-        <button onClick={this.toHome}>Back To List</button>
+        <p>{this.props.description}</p>
+        
+        
       </div>
     );
   }
