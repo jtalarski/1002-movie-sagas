@@ -1,6 +1,7 @@
 //import { Select } from '@material-ui/core';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router'
 //import SearchViewItem from '../SearchViewItem/SearchViewItem';
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -26,20 +27,36 @@ handleChangeFor = (propertyName, event) => {
     console.log('Movie state:', this.state);
   } // end handleChangeFor
 
+onSelect = () => {
+  console.log('what is the id', this.props.state);
+  this.props.dispatch({
+    type: 'ADD_MOVIE',
+    payload: this.props.state
+  })
+  this.toHome()
+}
 
-
-
+toHome = () => {
+  this.props.history.push('/')
+}
 
   render() {
     return (
       <div>
           <h1>Add Movie Form</h1>
         {/* <form onSubmit={this.addMovie}> */}
-        <input placeholder="Movie Title"></input> <br/>
-        <input placeholder="Movie Poster URL"></input><br/>
-        <textarea placeholder="Movie Description"></textarea><br/>
+        <input placeholder="Movie Title" 
+          onChange={(event) => this.handleChangeFor('title', event)}>
+          </input> <br/>
+        <input placeholder="Movie Poster URL" 
+          onChange={(event) => this.handleChangeFor('poster', event)}> 
+          </input><br/>
+        <textarea placeholder="Movie Description" 
+          onChange={(event) => this.handleChangeFor('description', event)}>
+          </textarea><br/>
         <label htmlFor="Genre">Chose a genre </label><br></br>
-        <select name="genre" onChange={(event) => this.handleChangeFor('genre', event)}>
+        <select name="genre" 
+        onChange={(event) => this.handleChangeFor('genre', event)}>
             <option value="1">Adventure</option>
             <option value="2">Animated</option>
             <option value="3">Biographical</option>
@@ -57,10 +74,10 @@ handleChangeFor = (propertyName, event) => {
         {/* </form> */}
         <br></br>
         <button>Cancel</button>
-        <button>Save</button>
+        <button onClick={this.onSelect}>Save</button>
       </div>
     );
   }
 }
 
-export default connect(mapStateToProps)(AddMovieForm);
+export default connect(mapStateToProps)(withRouter(AddMovieForm));

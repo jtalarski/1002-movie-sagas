@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router'
 
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 const mapStateToProps = reduxState => ({
     reduxState,
 });
@@ -19,7 +19,7 @@ toHome = () => {
       <div>
     
         <h3>{this.props.title}</h3>
-        <img src={this.props.poster}></img>
+        <img src={this.props.poster} alt="movie poster"></img>
         <p>{this.props.description}</p>
         <p>Genre: {this.props.genre}</p>
         <button onClick={this.toHome}>Back To List</button>
