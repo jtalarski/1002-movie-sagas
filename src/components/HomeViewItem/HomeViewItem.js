@@ -12,7 +12,7 @@ class HomeViewItem extends Component {
       <div>
         {/* <h1>HomeViewItem</h1> */}
         {/* <span><img src={this.props.poster} /></span> */}
-        <input type="image" src={this.props.poster}></input>
+        <input type="image" id={this.props.poster} src={this.props.poster} alt="movie poster"></input>
         {/* <pre>{JSON.stringify(this.props.poster)}</pre> */}
       </div>
     );

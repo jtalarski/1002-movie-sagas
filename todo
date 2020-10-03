@@ -1,3 +1,7 @@
 [x] npm install and spin up server
 [x] setup DB
 [] setup page structure
+[] setup HomeView and HomeViewItem pages    
+    [] setup GET flow to get existing movie details from DB
+[] setup add movie page
+
