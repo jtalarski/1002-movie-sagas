@@ -35,11 +35,11 @@ handleChangeFor = (propertyName, event) => {
       <div>
           <h1>Add Movie Form</h1>
         {/* <form onSubmit={this.addMovie}> */}
-        <input placeholder="Movie Title" onChange={(event) => this.handleChangeFor('title', event)}/>
-        <input placeholder="Poster URL" onChange={(event) => this.handleChangeFor('poster', event)}/>
-        <input placeholder="Description" onChange={(event) => this.handleChangeFor('description', event)}/>
-        <label>Chose a genre </label>
-        <select name="genre" onChange={(event) => this.handleChangeFor('genre', event)}>Genre
+        <input placeholder="Movie Title"></input> <br/>
+        <input placeholder="Movie Poster URL"></input><br/>
+        <textarea placeholder="Movie Description"></textarea><br/>
+        <label htmlFor="Genre">Chose a genre </label><br></br>
+        <select name="genre" onChange={(event) => this.handleChangeFor('genre', event)}>
             <option value="1">Adventure</option>
             <option value="2">Animated</option>
             <option value="3">Biographical</option>
@@ -53,8 +53,9 @@ handleChangeFor = (propertyName, event) => {
             <option value="11">Science Fiction</option>
             <option value="12">Space Opera</option>
             <option value="13">Superhero</option>
-            </select>
+            </select><br></br>
         {/* </form> */}
+        <br></br>
         <button>Cancel</button>
         <button>Save</button>
       </div>

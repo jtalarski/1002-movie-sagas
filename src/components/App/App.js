@@ -12,13 +12,12 @@ class App extends Component {
       <div className="App">
         <h1>Movies!</h1>
         <Router>
-          <nav>
-            <main>
-              <ul><Link to="/">Home</Link></ul>
-              <ul><Link to="/Details">Details</Link></ul>
-              <ul><Link to="/AddMovie">AddMovie</Link></ul>
-            </main>
-          </nav>
+          
+              <Link to="/">Home</Link><br></br>
+              <Link to="/Details">Details</Link><br></br>
+              <Link to="/AddMovie">AddMovie</Link>
+          
+            
           <Route path="/" exact><HomeView/></Route>
           <Route path="/Details"><DetailsView/></Route>
           <Route path="/AddMovie"><AddMovieForm/></Route>
