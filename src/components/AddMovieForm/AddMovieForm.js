@@ -17,7 +17,7 @@ class AddMovieForm extends Component {
     title: "",
     poster: "",
     description: "",
-    genre: ""
+    genre_id: ""
   }
 }
 
@@ -58,7 +58,7 @@ toHome = () => {
           </textarea><br/>
         <label htmlFor="Genre">Chose a genre </label><br></br>
         <select name="genre" 
-        onChange={(event) => this.handleChangeFor('genre', event)}>
+        onChange={(event) => this.handleChangeFor('genre_id', event)}>
             <option value="1">Adventure</option>
             <option value="2">Animated</option>
             <option value="3">Biographical</option>
