@@ -21,6 +21,7 @@ toHome = () => {
         <h3>{this.props.title}</h3>
         <img src={this.props.poster}></img>
         <p>{this.props.description}</p>
+        <p>Genre: {this.props.genre}</p>
         <button onClick={this.toHome}>Back To List</button>
       </div>
     );
