@@ -52,6 +52,18 @@ router.get('/', (req, res) => {
 });
 
 
+router.get('/:tacos', (req, res) => {
+  console.log('/GET');
+  const queryText = `SELECT * FROM movies WHERE "id" = ${req.params.tacos};`;
+  pool.query(queryText)
+    .then((result) => { res.send(result.rows); })
+    .catch((err) => {
+      console.error('ERROR IN GET /movies');
+      res.sendStatus(500);
+    })
+});
+
+
 
 
 module.exports = router;

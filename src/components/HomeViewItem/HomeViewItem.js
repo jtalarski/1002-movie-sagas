@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router'
 //import SearchViewItem from '../SearchViewItem/SearchViewItem';
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -10,7 +11,12 @@ class HomeViewItem extends Component {
 
 idForDetail = ()=>{
   console.log('what is the id', this.props.id);
-  //this.props.dispatch
+  this.props.dispatch({
+    type: 'FETCH_DETAIL',
+    payload: this.props.id
+  })
+  
+  this.props.history.push('/Details')
 
 }
 
@@ -29,4 +35,4 @@ idForDetail = ()=>{
   }
 }
 
-export default connect(mapStateToProps)(HomeViewItem);
+export default connect(mapStateToProps)(withRouter(HomeViewItem));

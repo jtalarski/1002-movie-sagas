@@ -10,7 +10,8 @@ class DetailsView extends Component {
   render() {
     return (
       <div>
-        <pre>{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre>
+        <pre>{JSON.stringify(this.props.reduxState.details, null, 2)}</pre>
+        
       </div>
     );
   }
