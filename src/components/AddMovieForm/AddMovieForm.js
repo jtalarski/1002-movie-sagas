@@ -12,11 +12,13 @@ const mapStateToProps = reduxState => ({
 class AddMovieForm extends Component {
   // Renders the entire app on the DOM
 
-  state = {
+  state = { 
+    newMovie: {
     title: "",
     poster: "",
     description: "",
     genre: ""
+  }
 }
 
 handleChangeFor = (propertyName, event) => {
@@ -28,7 +30,7 @@ handleChangeFor = (propertyName, event) => {
   } // end handleChangeFor
 
 onSelect = () => {
-  console.log('what is the id', this.props.state);
+  console.log('state at onSelect', this.state);
   this.props.dispatch({
     type: 'ADD_MOVIE',
     payload: this.state

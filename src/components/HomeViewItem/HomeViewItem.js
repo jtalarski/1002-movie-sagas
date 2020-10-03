@@ -10,7 +10,7 @@ class HomeViewItem extends Component {
   // Renders the entire app on the DOM
 
 idForDetail = ()=>{
-  console.log('what is the id', this.props.id);
+  console.log('id for details', this.props.id);
   this.props.dispatch({
     type: 'FETCH_DETAIL',
     payload: this.props.id

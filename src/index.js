@@ -45,15 +45,16 @@ function* fetchMoviesSaga(action) {
   }
 
 function* addMovieSaga (action){
-    console.log('hit addMovieSaga', action)
-    let response = yield axios({
+    console.log('hit addMovieSaga', action.payload)
+    yield axios({
     method: "POST",
-    url: 'api/movie'
+    url: 'api/movie',
+    data: action.payload
 });
-    console.lof('Got New Movie',response.data)
+    console.log('Got New Movie')
         yield put ({
-            type: 'SET_MOVIES',
-            payload: response.data
+            type: 'FETCH_MOVIES',
+            
         })
 }
 
