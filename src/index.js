@@ -44,11 +44,26 @@ function* fetchMoviesSaga(action) {
     });
   }
 
+function* addMovieSaga (action){
+    console.log('hit addMovieSaga', action.payload)
+    yield axios({
+    method: "POST",
+    url: 'api/movie',
+    data: action.payload
+});
+    console.log('Got New Movie')
+        yield put ({
+            type: 'FETCH_MOVIES',
+            
+        })
+}
+
 
 // Create the rootSaga generator function
 function* rootSaga() {
 yield takeEvery('FETCH_MOVIES', fetchMoviesSaga);
-yield takeEvery('FETCH_DETAIL', fetchDetailsSaga)
+yield takeEvery('FETCH_DETAIL', fetchDetailsSaga);
+yield takeEvery('ADD_MOVIE', addMovieSaga)
 }
 
 // Create sagaMiddleware
@@ -82,13 +97,22 @@ const details = (state = [], action) => {
             return state;
     }
 }
+const newMovie = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_NEWMOVIE':
+            return action.payload
+        default:
+            return state;
+    }
+}
 
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
-        details
+        details,
+        newMovie
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

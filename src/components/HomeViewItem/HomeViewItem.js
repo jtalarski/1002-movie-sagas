@@ -10,7 +10,7 @@ class HomeViewItem extends Component {
   // Renders the entire app on the DOM
 
 idForDetail = ()=>{
-  console.log('what is the id', this.props.id);
+  console.log('id for details', this.props.id);
   this.props.dispatch({
     type: 'FETCH_DETAIL',
     payload: this.props.id
@@ -26,7 +26,7 @@ idForDetail = ()=>{
       <div>
         {/* <h1>HomeViewItem</h1> */}
         {/* <span><img src={this.props.poster} /></span> */}
-        {/* <h3>{this.props.title}</h3> */}
+        <h4>{this.props.title}</h4>
         <input type="image" id={this.props.id} src={this.props.poster} onClick={this.idForDetail} alt="movie poster"></input><br></br>
         {/* <p>{this.props.description}</p> */}
         {/* <pre>{JSON.stringify(this.props.poster)}</pre> */}

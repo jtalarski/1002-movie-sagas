@@ -12,11 +12,13 @@ const mapStateToProps = reduxState => ({
 class AddMovieForm extends Component {
   // Renders the entire app on the DOM
 
-  state = {
+  state = { 
+    newMovie: {
     title: "",
     poster: "",
     description: "",
-    genre: ""
+    genre_id: ""
+  }
 }
 
 handleChangeFor = (propertyName, event) => {
@@ -28,10 +30,10 @@ handleChangeFor = (propertyName, event) => {
   } // end handleChangeFor
 
 onSelect = () => {
-  console.log('what is the id', this.props.state);
+  console.log('state at onSelect', this.state);
   this.props.dispatch({
     type: 'ADD_MOVIE',
-    payload: this.props.state
+    payload: this.state
   })
   this.toHome()
 }
@@ -56,7 +58,7 @@ toHome = () => {
           </textarea><br/>
         <label htmlFor="Genre">Chose a genre </label><br></br>
         <select name="genre" 
-        onChange={(event) => this.handleChangeFor('genre', event)}>
+        onChange={(event) => this.handleChangeFor('genre_id', event)}>
             <option value="1">Adventure</option>
             <option value="2">Animated</option>
             <option value="3">Biographical</option>
