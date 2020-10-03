@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import SearchViewItem from '../SearchViewItem/SearchViewItem';
+import {Link} from 'react-router-dom'
 const mapStateToProps = reduxState => ({
     reduxState,
 });
@@ -10,7 +10,7 @@ class DetailsView extends Component {
   render() {
     return (
       <div>
-        <h1>DetailsView</h1>
+        <pre>{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre>
       </div>
     );
   }
