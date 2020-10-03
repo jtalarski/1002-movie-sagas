@@ -21,6 +21,8 @@ class AddMovieForm extends Component {
   }
 }
 
+
+// setState for each of the four input fields one at a time
 handleChangeFor = (propertyName, event) => {
     this.setState({
       ...this.state,
@@ -29,6 +31,9 @@ handleChangeFor = (propertyName, event) => {
     console.log('Movie state:', this.state);
   } // end handleChangeFor
 
+
+ // sends a dispatch to trigger addMovieSaga on index.js
+ // then sends user back to HomeView page
 onSelect = () => {
   console.log('state at onSelect', this.state);
   this.props.dispatch({
@@ -46,7 +51,6 @@ toHome = () => {
     return (
       <div>
           <h1>Add Movie Form</h1>
-        {/* <form onSubmit={this.addMovie}> */}
         <input placeholder="Movie Title" 
           onChange={(event) => this.handleChangeFor('title', event)}>
           </input> <br/>
@@ -73,7 +77,6 @@ toHome = () => {
             <option value="12">Space Opera</option>
             <option value="13">Superhero</option>
             </select><br></br>
-        {/* </form> */}
         <br></br>
         <button>Cancel</button>
         <button onClick={this.onSelect}>Save</button>

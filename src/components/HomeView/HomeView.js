@@ -6,12 +6,14 @@ const mapStateToProps = reduxState => ({
 });
 
 class HomeView extends Component {
-componentDidMount () {
+// displays a list of movies with attributes upon
+// page load
+  componentDidMount () {
   this.fetchMovies();
 }
 
 
-
+// displays a list of movies with attributes when called
   fetchMovies=()=>{
     console.log('in fetchMovies on HomeView');
     this.props.dispatch({
