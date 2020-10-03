@@ -31,7 +31,7 @@ onSelect = () => {
   console.log('what is the id', this.props.state);
   this.props.dispatch({
     type: 'ADD_MOVIE',
-    payload: this.props.state
+    payload: this.state
   })
   this.toHome()
 }
