@@ -54,7 +54,12 @@ router.get('/', (req, res) => {
 
 router.get('/:tacos', (req, res) => {
   console.log('/GET');
-  const queryText = `SELECT * FROM movies WHERE "id" = ${req.params.tacos};`;
+  const queryText = `SELECT * FROM "movies"
+	JOIN "movie_genre"
+		ON "movies"."id" = "movie_genre"."movie_id"
+	JOIN "genres"
+		ON "movie_genre"."genre_id" = "genres"."id"
+WHERE "movies"."id" = ${req.params.tacos};`;
   pool.query(queryText)
     .then((result) => { res.send(result.rows); })
     .catch((err) => {
