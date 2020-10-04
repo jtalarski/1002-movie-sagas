@@ -2,10 +2,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router'
-//import SearchViewItem from '../SearchViewItem/SearchViewItem';
+
+// material UI attempt
+import Button from @material-ui/core/Button
+
+
 const mapStateToProps = reduxState => ({
     reduxState,
 });
+
 
 
 
@@ -79,7 +84,7 @@ toHome = () => {
             <option value="13">Superhero</option>
             </select><br></br>
         <br></br>
-        <button>Cancel</button>
+        <button on-click={this.toHome}>Cancel</button>
         <button onClick={this.onSelect}>Save</button>
       </div>
     );

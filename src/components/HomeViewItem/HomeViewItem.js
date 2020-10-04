@@ -24,10 +24,12 @@ idForDetail = ()=>{
   render() {
     return (
       <div>
+        
         <div id="movieFrame">
         <h4>{this.props.title}</h4>
         <input type="image" id={this.props.id} src={this.props.poster} onClick={this.idForDetail} alt="movie poster"></input><br></br>
         </div>
+        
       </div>
     );
   }
