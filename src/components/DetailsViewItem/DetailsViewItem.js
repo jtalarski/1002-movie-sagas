@@ -33,7 +33,6 @@ toHome = () => {
           onClick={this.toHome}>Back To List
         </Button><br></br>
         <img src={this.props.poster} alt="movie poster" id="detailsPic"></img><br></br>
-       
         <p id="detailsGenre">Genre: {this.props.genre}</p>
         <p id="detailsPara">{this.props.description}</p>
         
