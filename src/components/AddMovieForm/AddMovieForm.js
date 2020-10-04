@@ -4,8 +4,13 @@ import { connect } from 'react-redux';
 import {withRouter} from 'react-router'
 
 // material UI attempt
-import Button from @material-ui/core/Button
-
+import Button from '@material-ui/core/Button';
+// import { makeStyles } from '@material-ui/core/styles';
+// import InputLabel from '@material-ui/core/InputLabel';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import FormHelperText from '@material-ui/core/FormHelperText';
+// import FormControl from '@material-ui/core/FormControl';
+// import Select from '@material-ui/core/Select';
 
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -84,8 +89,8 @@ toHome = () => {
             <option value="13">Superhero</option>
             </select><br></br>
         <br></br>
-        <button on-click={this.toHome}>Cancel</button>
-        <button onClick={this.onSelect}>Save</button>
+        <Button variant='contained' color='secondary' size='small' onClick={this.toHome} >Cancel</Button>
+        <Button variant='contained' color='primary' size='small' onClick={this.onSelect}>Save</Button>  
       </div>
     );
   }
