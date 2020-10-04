@@ -16,3 +16,12 @@ h4 {
   padding: 0;
   float: left;
 }
+
+
+#filled-basic {
+  background-color: white;
+}
+
+#genreSelect{
+  background-color: white;
+}
