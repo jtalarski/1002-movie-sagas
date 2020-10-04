@@ -62,7 +62,7 @@ toHome = () => {
   render() {
     return (
       <div>
-          <h4>Enter Moive Details</h4><br></br>
+          <h4>Enter Movie Details</h4><br></br>
           <TextField  label="Title:"
           onChange={(event) => this.handleChangeFor('title', event)}/><br/>
         
