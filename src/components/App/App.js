@@ -4,7 +4,7 @@ import HomeView from '../HomeView/HomeView'
 import DetailsView from '../DetailsView/DetailsView'
 import AddMovieForm from '../AddMovieForm/AddMovieForm'
 import './App.css';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
 class App extends Component {
   // Renders the entire app on the DOM
   render() {

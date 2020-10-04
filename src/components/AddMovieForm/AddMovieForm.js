@@ -3,14 +3,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router'
 
-// material UI attempt
+// material UI styling option
 import Button from '@material-ui/core/Button';
 // import { makeStyles } from '@material-ui/core/styles';
-// import InputLabel from '@material-ui/core/InputLabel';
-// import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+// import Input from '@material-ui/core/Input';
 // import FormHelperText from '@material-ui/core/FormHelperText';
 // import FormControl from '@material-ui/core/FormControl';
-// import Select from '@material-ui/core/Select';
+import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
 
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -60,34 +62,34 @@ toHome = () => {
   render() {
     return (
       <div>
-          <h1>Add Movie Form</h1>
-        <input placeholder="Movie Title" 
-          onChange={(event) => this.handleChangeFor('title', event)}>
-          </input> <br/>
-        <input placeholder="Movie Poster URL" 
+          <h4>Enter Moive Details</h4><br></br>
+          <TextField  label="Title:"
+          onChange={(event) => this.handleChangeFor('title', event)}/><br/>
+        
+        <TextField label="Poster Url:"  
           onChange={(event) => this.handleChangeFor('poster', event)}> 
-          </input><br/>
-          <span>For testing use /images/coming.gif</span><br></br>
-        <textarea placeholder="Movie Description" 
+          </TextField><br/>
+        <TextField label="Description:"  
           onChange={(event) => this.handleChangeFor('description', event)}>
-          </textarea><br/>
-        <label htmlFor="Genre">Chose a genre </label><br></br>
-        <select name="genre" 
+          </TextField><br/>
+        
+        <InputLabel id="genre" >Genre:</InputLabel>
+        <Select name="genre" value="age" 
         onChange={(event) => this.handleChangeFor('genre_id', event)}>
-            <option value="1">Adventure</option>
-            <option value="2">Animated</option>
-            <option value="3">Biographical</option>
-            <option value="4">Comedy</option>
-            <option value="5">Diaster</option>
-            <option value="6">Drama</option>
-            <option value="7">Epic</option>
-            <option value="8">Fantasy</option>
-            <option value="9">Musical</option>
-            <option value="10">Romatic</option>
-            <option value="11">Science Fiction</option>
-            <option value="12">Space Opera</option>
-            <option value="13">Superhero</option>
-            </select><br></br>
+            <MenuItem value="1">Adventure</MenuItem>
+            <MenuItem value="2">Animated</MenuItem>
+            <MenuItem value="3">Biographical</MenuItem>
+            <MenuItem value="4">Comedy</MenuItem>
+            <MenuItem value="5">Diaster</MenuItem>
+            <MenuItem value="6">Drama</MenuItem>
+            <MenuItem value="7">Epic</MenuItem>
+            <MenuItem value="8">Fantasy</MenuItem>
+            <MenuItem value="9">Musical</MenuItem>
+            <MenuItem value="10">Romatic</MenuItem>
+            <MenuItem value="11">Science Fiction</MenuItem>
+            <MenuItem value="12">Space Opera</MenuItem>
+            <MenuItem value="13">Superhero</MenuItem>
+            </Select><br></br>
         <br></br>
         <Button variant='contained' color='secondary' size='small' onClick={this.toHome} >Cancel</Button>
         <Button variant='contained' color='primary' size='small' onClick={this.onSelect}>Save</Button>  
