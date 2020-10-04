@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router'
-//import SearchViewItem from '../SearchViewItem/SearchViewItem';
-// material UI test features
-import Grid from '@material-ui/core/Grid';
 
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -31,13 +28,12 @@ idForDetail = ()=>{
       <div>
         
         <div id="movieFrame">
-        
-        <Grid container>
-          <Grid item xs={6}>  
-          {/* <h4>{this.props.title}</h4> */}
-          <input type="image" id={this.props.id} src={this.props.poster} onClick={this.idForDetail} alt="movie poster"></input><br></br>
-          </Grid>
-        </Grid>
+          <input type="image" 
+            id={this.props.id} 
+            src={this.props.poster} 
+            onClick={this.idForDetail} 
+            alt="movie poster">
+          </input><br></br>
         </div>
         
       </div>

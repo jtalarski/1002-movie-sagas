@@ -24,7 +24,7 @@ class HomeView extends Component {
   render() {
     return (
       <div>
-        <h3>Click Movie Poster for More Details</h3>
+        <h4>Click Movie Poster for More Details</h4><br/>
         {/* <pre>SB movies{JSON.stringify(this.props.reduxState.movies, null, 2)}</pre> */}
         {this.props.reduxState.movies.map((movie, i) => 
             <HomeViewItem key={movie.id} id={movie.id} title={movie.title} poster={movie.poster} description={movie.description}/>)}
