@@ -42,7 +42,6 @@ handleChangeFor = (propertyName, event) => {
       ...this.state,
       [propertyName]: event.target.value
     }); // end setState
-    console.log('Movie state:', this.state);
   } // end handleChangeFor
 
 
@@ -62,6 +61,7 @@ toHome = () => {
 }
 
   render() {
+    console.log('Movie state:', this.state);
     return (
       <div>
           <h4>Enter Movie Details</h4><br></br>
