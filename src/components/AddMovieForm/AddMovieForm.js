@@ -64,16 +64,26 @@ toHome = () => {
       <div>
           <h4>Enter Movie Details</h4><br></br>
           <TextField  label="Title:"
+          variant="filled"
+          id="filled-basic"
           onChange={(event) => this.handleChangeFor('title', event)}/><br/>
         
         <TextField label="Poster Url:"  
+          variant="filled"
+          id="filled-basic"
           onChange={(event) => this.handleChangeFor('poster', event)}> 
           </TextField><br/>
-        <TextField label="Description:"  
+        <TextField 
+          variant="filled"
+          id="filled-basic"
+          // multiline 
+          // rows={3}
+          // rowsMax={Infinity}
+          label="Description:"  
           onChange={(event) => this.handleChangeFor('description', event)}>
           </TextField><br/>
         
-        <InputLabel id="genre" >Genre:</InputLabel>
+        <InputLabel id="genre" >Genre (select one) :</InputLabel>
         <Select name="genre" value="age" 
         onChange={(event) => this.handleChangeFor('genre_id', event)}>
             <MenuItem value="1">Adventure</MenuItem>
