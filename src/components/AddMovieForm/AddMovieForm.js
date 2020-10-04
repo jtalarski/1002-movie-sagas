@@ -22,8 +22,10 @@ const mapStateToProps = reduxState => ({
 
 
 class AddMovieForm extends Component {
-  // Renders the entire app on the DOM
-
+ 
+  
+// creates the objey newMovie that will be added to reduxState
+// in the function onSelect
   state = { 
     newMovie: {
     title: "",

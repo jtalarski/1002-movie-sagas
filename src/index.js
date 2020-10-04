@@ -48,7 +48,7 @@ function* fetchMoviesSaga(action) {
   }
 
 
- // used to senf POST request to movie.router and
+ // used to send POST request to movie.router and
  // to reset the DOM with the fetchMoviesSaga
 function* addMovieSaga (action){
     console.log('hit addMovieSaga', action.payload)
