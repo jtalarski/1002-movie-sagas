@@ -28,12 +28,12 @@ idForDetail = ()=>{
       <div>
         
         <div id="movieFrame">
-          <input type="image" 
+          <img  
             id={this.props.id} 
             src={this.props.poster} 
             onClick={this.idForDetail} 
             alt="movie poster">
-          </input><br></br>
+          </img>    
         </div>
         
       </div>

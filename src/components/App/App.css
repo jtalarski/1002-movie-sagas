@@ -22,3 +22,45 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+#detailsPic {
+  float: left;
+  padding: 40px;
+}
+
+#detailsPara {
+  padding: 10px;
+  text-align: left;
+}
+
+#detailsGenre {
+  text-align: left;
+}
+
+h4 {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+#movieFrame {
+  display: inline-block;
+  /* position: relative; */
+  margin: 10px;
+  float: left;
+}
+
+
+#filled-basic {
+  background-color: white;
+}
+
+#genreSelect{
+  background-color: white;
+}
+
+img {
+  width: 185px;
+  height: 275px;
+}
+

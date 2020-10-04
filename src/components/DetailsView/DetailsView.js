@@ -16,7 +16,13 @@ class DetailsView extends Component {
        
        {/* Maps redux state and pushes key values to DetailsViewItem */}
         {this.props.reduxState.details.map((detail, i) => 
-            <DetailsViewItem key={detail.id} id={detail.id} title={detail.title} poster={detail.poster} description={detail.description} genre={detail.name}/>)}
+            <DetailsViewItem 
+              key={detail.id} 
+              id={detail.id} 
+              title={detail.title} 
+              poster={detail.poster} 
+              description={detail.description} 
+              genre={detail.name}/>)}
       </div>
     );
   }
