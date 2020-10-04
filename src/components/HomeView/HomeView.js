@@ -10,6 +10,15 @@ class HomeView extends Component {
 // page load
   componentDidMount () {
   this.fetchMovies();
+  this.fetchGenres();
+}
+
+// pulls in list of genres for use in AddMovieForm
+fetchGenres=()=>{
+  console.log('in fetchGenres on HomeView');
+  this.props.dispatch({
+    type: 'FETCH_GENRES'
+  })
 }
 
 

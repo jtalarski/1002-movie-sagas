@@ -31,9 +31,8 @@ toHome = () => {
           color='primary' 
           size='small' 
           onClick={this.toHome}>Back To List
-        </Button><br/>
-        <img id="detailsPic" src={this.props.poster} alt="movie poster"></img><br></br>
-        
+        </Button><br></br>
+        <img src={this.props.poster} alt="movie poster" id="detailsPic"></img><br></br>
         <p id="detailsGenre">Genre: {this.props.genre}</p>
         <p id="detailsPara">{this.props.description}</p>
         

@@ -30,6 +30,19 @@ function* fetchMoviesSaga(action) {
     });
   }
 
+function* fetchGenresSaga(action) {
+    let response = yield axios({
+        method: "GET",
+        url: '/api/genre'
+      });
+    
+      console.log('Got some genres', response.data);
+      yield put({
+        type: "SET_GENRES",
+        payload: response.data
+      });  
+}
+
 // used to make GET request to movies.router for values of one 
 // movie id
   function* fetchDetailsSaga(action) {
@@ -69,7 +82,8 @@ function* addMovieSaga (action){
 function* rootSaga() {
 yield takeEvery('FETCH_MOVIES', fetchMoviesSaga);
 yield takeEvery('FETCH_DETAIL', fetchDetailsSaga);
-yield takeEvery('ADD_MOVIE', addMovieSaga)
+yield takeEvery('ADD_MOVIE', addMovieSaga);
+yield takeEvery('FETCH_GENRES', fetchGenresSaga)
 }
 
 // Create sagaMiddleware
