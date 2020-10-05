@@ -63,7 +63,7 @@ VALUES
 
 -- adds junction between existing movies and genres
 INSERT INTO "movie_genre" ("movie_id", "genre_id")
-	VALUES (14,2),(1,11),
+	VALUES (1,11),
 (2,	2),
 (3,	13),
 (4,	2),
