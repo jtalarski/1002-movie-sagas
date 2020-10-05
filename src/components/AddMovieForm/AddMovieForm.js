@@ -13,6 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 // import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
+//import SaveIcon from '@material-ui/icons/Save'
 
 const mapStateToProps = reduxState => ({
     reduxState,
@@ -104,7 +105,7 @@ toHome = () => {
             </Select><br></br>
         <br></br>
         <Button variant='contained' color='secondary' size='small' onClick={this.toHome} >Cancel</Button>
-        <Button variant='contained' color='primary' size='small' onClick={this.onSelect}>Save</Button>  
+    <Button variant='contained' color='primary' size='small' onClick={this.onSelect}>Save</Button>  
       </div>
     );
   }

@@ -32,6 +32,7 @@
 #detailsGenre {
   text-align: left;
   margin: 5px;
+  padding-top: 5px;
 }
 
 #detailsPara {
@@ -65,3 +66,5 @@ img {
   height: 275px;
   width: 185px;
 }
+
+nav {}
